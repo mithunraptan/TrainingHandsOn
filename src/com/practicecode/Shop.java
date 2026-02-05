@@ -1,4 +1,4 @@
-package com.studentavg;
+package com.practicecode;
 
 import java.util.Arrays;
 
