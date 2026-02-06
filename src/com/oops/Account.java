@@ -16,5 +16,5 @@ public abstract class Account {
 	
 	
 	public abstract double deposit(double accountBalance, double deposiitBalance);
-	public abstract double withdraw(double accountBalance, double withdrawBalance);
+	public abstract double withdraw(double accountBalance, double withdrawBalance) throws InsufficientBalanceException;
 }

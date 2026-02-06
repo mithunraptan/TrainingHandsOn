@@ -8,7 +8,7 @@ public class SavingAccount extends Account {
 	}
 
 	@Override
-	public double deposit(double accountBalance, double deposiitBalance) {
+	public double deposit(double accountBalance, double deposiitBalance){
 		// TODO Auto-generated method stub
 		
 		double total = accountBalance+deposiitBalance;
@@ -18,18 +18,17 @@ public class SavingAccount extends Account {
 	}
 
 	@Override
-	public double withdraw(double accountBalance, double withdrawBalance) {
+	public double withdraw(double accountBalance, double withdrawBalance) throws InsufficientBalanceException {
 		// TODO Auto-generated method stub
 		
-		if(accountBalance-withdrawBalance<1000) {
-			System.out.println("please maintain minimum balance");
-			return 0;
-			
-		}
-		else {
+		if(accountBalance-withdrawBalance>1000) {
 			double total = accountBalance-withdrawBalance;
 			return total;
+//			System.out.println("please maintain minimum balance");
+			
+			
 		}
+		throw new InsufficientBalanceException("please maintain minimum balance");
 		
 	}
 

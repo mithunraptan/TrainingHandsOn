@@ -65,17 +65,27 @@ public class Main {
 				else if (accountHolderChoice.equalsIgnoreCase("W")) {
 					System.out.println("enter withdraw amount: ");
 					double withdrawAmount = sc.nextDouble();
-					double totalAmount = savingAccount.withdraw(accountBalance, withdrawAmount);
-					accountBalance = totalAmount;
-					System.out.println("your total balance is: "+ accountBalance);
-					System.out.println("do you want to deposit and withdraw again? Y/N");
-					String choice = sc.next();
-					if(choice.equalsIgnoreCase("Y")) {
-						userChoice = true;
+					
+					try {
+						double totalAmount = savingAccount.withdraw(accountBalance, withdrawAmount);
+						accountBalance = totalAmount;
+						System.out.println("your total balance is: "+ accountBalance);
+						System.out.println("do you want to deposit and withdraw again? Y/N");
+						String choice = sc.next();
+						if(choice.equalsIgnoreCase("Y")) {
+							userChoice = true;
+						}
+						else {
+							userChoice = false;
+						}
+						
+					}catch (Exception e) {
+						// TODO: handle exception
+						System.out.println(e.getMessage());
 					}
-					else {
-						userChoice = false;
-					}
+					
+					
+					
 				}
 				
 				
