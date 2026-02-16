@@ -44,7 +44,7 @@ public class MainDriverClass {
 			case 2: {
 				if (listOfContact.isEmpty()) {
 					System.out.println("no contacts found!! please add contacts");
-					ch = 1;
+//					ch = 1;
 					break;
 				} else {
 					Map<Long, String> viewAllContact = Phonebook.viewAllContact(listOfContact);
