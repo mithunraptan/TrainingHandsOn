@@ -60,7 +60,7 @@ public class DbUtil {
 //			    String prodDesc = sc.nextLine();
 //
 //			    System.out.print("Enter Product Price: ");
-//			    BigDecimal price = sc.nextBigDecimal(); // ✅ better for NUMERIC
+//			    BigDecimal price = sc.nextBigDecimal(); // better for NUMERIC
 //			    sc.nextLine(); // consume newline
 //
 //			    System.out.print("Enter Product category: ");
