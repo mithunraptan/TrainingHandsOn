@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd">
+               
+<context:annotation-config></context:annotation-config>                        
+ <!--Person class bean  -->               
+ <bean id = "person" class="com.training.spring.Person" scope="prototype">
+ <property name="firstName" value = "John"/> <!-- setter injection -->
+ <constructor-arg type="int" value="23"/> <!-- constructor injection-->
+ <!--<property name="car" ref="carId"/> setter injection of Car class bean   -->
+ </bean>
+ <!--Car class bean  -->               
+ <bean id = "car" class="com.training.spring.Car" scope="prototype">
+ <property name="make" value = "Audi"/> <!-- setter injection -->
+ <property name="model" value = "Audi001"/>
+  <property name="year" value = "2026"/>
+ 
+ </bean>
+                        
+</beans>
