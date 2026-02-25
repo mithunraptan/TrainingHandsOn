@@ -7,6 +7,10 @@
   
   
   <!-- Servlet Declaration -->
+   <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.training.servlet.LogoutServlet</servlet-class>
+    </servlet>
   <servlet>
         <servlet-name>SignupServlet</servlet-name>
         <servlet-class>com.training.servlet.SignupServlet</servlet-class>
@@ -27,5 +31,9 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-  
+    
+      <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
 </web-app>

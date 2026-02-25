@@ -9,6 +9,14 @@
 <body>
 
 <h2>Login</h2>
+<%
+    String error = (String) request.getAttribute("errorMessage");
+    if (error != null) {
+%>
+    <p style="color:red;"><%= error %></p>
+<%
+    }
+%>
 
 <form action="login" method="post">
     Username:

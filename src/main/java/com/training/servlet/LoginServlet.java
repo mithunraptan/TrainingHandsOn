@@ -37,9 +37,13 @@ public class LoginServlet extends HttpServlet {
         boolean valid = userService.validateLogin(username, password);
 
         if (valid) {
-            response.getWriter().println("Login Successful (Servlet + Hibernate + Spring)");
+//            response.getWriter().println("Login Successful (Servlet + Hibernate + Spring)");
+        	response.sendRedirect("home.jsp");
+            
         } else {
-            response.getWriter().println("Invalid username or password");
+            request.setAttribute("errorMessage", "Invalid username or password");
+            request.getRequestDispatcher("login.jsp")
+                   .forward(request, response);
         }
     }
 }
