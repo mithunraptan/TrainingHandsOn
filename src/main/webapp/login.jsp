@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form action="login" method="post">
+    Username:
+    <input type="text" name="userName" required>
+    <br><br>
+
+    Password:
+    <input type="password" name="password" required>
+    <br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<br><br>
+
+<p>
+    New user?
+    <a href="signup.jsp">Signup here</a>
+</p>
+
+</body>
+</html>
