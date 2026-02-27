@@ -6,6 +6,8 @@
   </welcome-file-list>
   
   
+  
+  
   <!-- Servlet Declaration -->
    <servlet>
         <servlet-name>LogoutServlet</servlet-name>
@@ -36,4 +38,22 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    
+    
+    <!-- Register Filter  -->
+    <!-- context is for global value set for an entire application -->
+    <context-param>
+    	<param-name>filterCounter</param-name>
+    	<param-value>0</param-value>
+    </context-param>
+    
+    <filter>
+    	<filter-name>LogginFilter</filter-name>
+    	<filter-class>com.training.filter.LogginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    	<filter-name>LogginFilter</filter-name>
+    	<url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
 </web-app>

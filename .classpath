@@ -29,15 +29,11 @@
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/jars-web-servlet and hibernate/jars-web/jaxb-runtime-4.0.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/jars-web-servlet and hibernate/jars-web/classmate-1.5.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/jars-web-servlet and hibernate/jars-web/postgresql-42.7.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-web-5.3.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-expression-5.3.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-core-5.3.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-context-5.3.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-beans-5.3.30.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-tx-5.3.30.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-orm-5.3.30.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-jdbc-5.3.30.jar"/>
-	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-aop-5.3.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-jcl-5.3.30.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/spring-aop-5.3.30.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
