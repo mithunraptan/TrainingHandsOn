@@ -4,10 +4,70 @@
     "https://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
     <package name="default" extends="struts-default">
+    
+    <interceptors>
+    	<!-- here we can write n number of interceptors -->
+    	<interceptor name="accountSecurity"
+    				 class="com.training.interceptor.AccountSecurityInterceptor"
+    	/>
+    	<interceptor name="roleInterceptor"
+    				 class="com.training.interceptor.RoleInterceptor"
+    	/>
+    	<interceptor-stack name="customStack">
+    		<interceptor-ref name="roleInterceptor"></interceptor-ref>
+    		<interceptor-ref name="defaultStack"></interceptor-ref>
+    	
+    	</interceptor-stack>
+    	
+    	
+    	
+    
+    </interceptors>
+    
+    
+    
+    
         <action name="login"
                 class="com.training.action.LoginAction">
+           <!--  <interceptor-ref name="customStack"></interceptor-ref> --> <!-- added custom interceptor here  -->
             <result name="success">/success.jsp</result>
             <result name="failure">/login.jsp</result>
+            <result name="locked">/account-locked.jsp</result>
+            
+            <result name = "admin" type = "redirectAction">adminDashboard</result>
+            <result name = "customer" type = "redirectAction">customerDashboard </result>
+            
+            
+            
         </action>
+        
+        
+        
+        
+        
+        <!-- Admin protected -->
+        
+        <action name="adminDashboard" class="com.training.action.AdminDashboardAction">
+        <interceptor-ref name="roleInterceptor">
+        <param name="requiredRole">ADMIN</param>
+        </interceptor-ref>
+        <interceptor-ref name="defaultStack"></interceptor-ref>
+        <result name="success">/admin.jsp</result>
+        <result name="unauthorized">/unauthorized.jsp</result>
+        
+        </action>
+        
+        <!-- Customer protected  -->
+        
+        <action name="customerDashboard" class="com.training.action.CustomerDashboardAction">
+        <interceptor-ref name="roleInterceptor">
+        <param name="requiredRole">CUSTOMER</param>
+        </interceptor-ref>
+        <interceptor-ref name="defaultStack"></interceptor-ref>
+        <result name="success">/customer.jsp</result>
+        <result name="unauthorized">/unauthorized.jsp</result>
+        
+        </action>
+        
     </package>
 </struts>
