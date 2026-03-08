@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true"/>
+    <!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"/> -->
+
+    <package name="myPackage" extends="struts-default">
+
+		<action name="addBook" class="com.training.action.AddAction">
+		<result type="redirect">viewBooks</result>
+		</action>
+		
+		<action name="viewBooks" class="com.training.action.ViewBooksAction">
+		<result>/viewBooks.jsp</result>
+		</action>
+		
+		<action name="deleteBook" class="com.training.action.DeleteBookAction">
+		<result type="redirect">viewBooks</result>
+		</action>
+		
+		<action name="searchBook" class="com.training.action.SearchBookAction">
+		<result>/viewBooks.jsp</result>
+		</action>
+		
+		<action name="editBook" class="com.training.action.EditBookAction">
+		<result>/updateBook.jsp</result>
+		</action>
+		
+		<action name="updateBook" class="com.training.action.UpdateBookAction">
+		<result type="redirect">viewBooks</result>
+		</action>
+        
+
+
+    </package>
+
+</struts>
