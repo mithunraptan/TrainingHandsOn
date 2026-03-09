@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+"-//Apache Struts//XWork Validator 1.0.3//EN"
+"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+    <field name="name">
+        <field-validator type="requiredstring">
+            <message>User name is required</message>
+        </field-validator>
+    </field>
+
+    <field name="bookName">
+        <field-validator type="requiredstring">
+            <message>Book name is required</message>
+        </field-validator>
+    </field>
+
+    <field name="authorName">
+        <field-validator type="requiredstring">
+            <message>Author name is required</message>
+        </field-validator>
+    </field>
+
+    <field name="bookPrice">
+        <field-validator type="requiredstring">
+            <message>Book price is required</message>
+        </field-validator>
+
+        <field-validator type="double">
+            <param name="minInclusive">1</param>
+            <message>Book price must be a valid number</message>
+        </field-validator>
+    </field>
+
+</validators>

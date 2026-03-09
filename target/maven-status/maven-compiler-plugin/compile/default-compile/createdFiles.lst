@@ -1,0 +1,9 @@
+com\training\action\UpdateBookAction.class
+com\training\action\ViewBooksAction.class
+com\training\action\EditBookAction.class
+com\training\config\SpringConfig.class
+com\training\action\DeleteBookAction.class
+com\training\action\SearchBookAction.class
+com\training\model\User.class
+com\training\action\AddAction.class
+com\training\dao\UserDAO.class
