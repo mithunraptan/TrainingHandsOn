@@ -1,0 +1,35 @@
+
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+ "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+<constant name="struts.devMode" value="true"/>
+
+ <package name="default" namespace="/" extends="struts-default">
+ 
+
+  <action name="addemployee" class="com.enterprise.action.EmployeeAction">
+   <result name="success" type="redirect">viewEmployees</result>
+   <result name="input">addemployee.jsp</result>
+  </action>
+  
+  <action name="viewEmployees" class="com.enterprise.action.ViewEmployeesAction">
+			<result name="success">employee-list.jsp</result>
+		</action>
+  
+  
+  
+  
+    <action name="dbcheck" class="com.enterprise.action.DbCheck">
+   <result name="success">/dbcheck-successfull.jsp</result>
+   <result name="failure">/index.jsp</result>
+  </action>
+  
+  
+  
+  
+
+ </package>
+</struts>
