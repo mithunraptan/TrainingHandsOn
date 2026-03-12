@@ -14,16 +14,28 @@ public class ViewEmployeesAction extends ActionSupport{
 	private EmployeeService employeeService;
 	
 	private List<Employee> employeeList;
+
+	
+	
 	
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		employeeList=employeeService.getEmployees();
-		return "success";
+		return SUCCESS;
 	}
 	
 	  public List<Employee> getEmployeeList(){
 	        return employeeList;
 	    }
+	  
+	  
+	  //setting getter and setter for the name and age
+
+	 
+	  
+	  
+	  
+	  
 
 }

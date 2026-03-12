@@ -7,7 +7,7 @@
 
 <constant name="struts.devMode" value="true"/>
 
- <package name="default" namespace="/" extends="struts-default">
+ <package name="default" namespace="/" extends="struts-default, json-default">
  
 
   <action name="addemployee" class="com.enterprise.action.EmployeeAction">
@@ -16,7 +16,11 @@
   </action>
   
   <action name="viewEmployees" class="com.enterprise.action.ViewEmployeesAction">
-			<result name="success">employee-list.jsp</result>
+  			<!-- commenting below line to understand Jquery 
+			<result name="success">employee-list.jsp</result> -->
+			<result type="json">
+				<param name="root">employeeList</param>
+			</result>
 		</action>
   
   

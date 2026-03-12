@@ -67,6 +67,33 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.3</version>
         </dependency>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--struts2 json plugin-->
+  <dependency>
+   <groupId>org.apache.struts</groupId>
+   <artifactId>struts2-json-plugin</artifactId>
+   <version>2.5.33</version>
+  </dependency>
+
+    <!--for struts2 jquery plugin for tags-->
+<dependency>
+    <groupId>com.jgeppert.struts2.jquery</groupId>
+    <artifactId>struts2-jquery-plugin</artifactId>
+    <version>3.7.1</version>
+    <scope>compile</scope>
+</dependency>
+    
+        
+        
+        
 
 
 
