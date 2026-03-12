@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+    <class name="com.enterprise.model.Employee" table="employee">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="name"/>
+        <property name="department"/>
+        <property name="salary"/>
+    </class>
+    </hibernate-mapping>

@@ -1,13 +1,13 @@
 
 package com.enterprise.model;
 
-import javax.persistence.*;
-
-@Entity
+//import javax.persistence.*;
+//
+//@Entity
 public class Employee {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+//@Id
+//@GeneratedValue(strategy = GenerationType.IDENTITY)
  private Long id;
 
  private String name;

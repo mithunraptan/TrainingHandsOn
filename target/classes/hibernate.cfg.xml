@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- DB Connection -->
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/employee-management
+        </property>
+
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">mithun</property>
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+
+        <!-- Automatically Create Tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- create, update, create-drop -->
+        <property name="hibernate.show_sql">true</property> <!-- you should not keep this in production else everybody can see the queries -->
+        <!-- XML Mapping Files -->
+        <mapping resource="Employee.hbm.xml"/> <!-- mapping file then create class. hbm-> hibernate mapping -->
+        <!-- <mapping resource="Order.hbm.xml"/>  --><!-- mapping file then create class -->
+
+    </session-factory>
+</hibernate-configuration>
