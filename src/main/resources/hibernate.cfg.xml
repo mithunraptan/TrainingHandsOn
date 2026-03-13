@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- DB Connection -->
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5432/e-learning-course
+        </property>
+
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">mithun</property>
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+
+        <!-- Automatically Create Tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- create, update, create-drop -->
+        <property name="hibernate.show_sql">true</property> <!-- we should not keep this in production else everybody can see the queries -->
+        
+        <!-- XML Mapping Files -->
+        <mapping class="com.learning.entity.Admin"></mapping>
+        <mapping class="com.learning.entity.Student"></mapping>
+        <mapping class="com.learning.entity.Course"></mapping>
+    </session-factory>
+</hibernate-configuration>

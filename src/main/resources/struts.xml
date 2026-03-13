@@ -1,0 +1,75 @@
+
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+ "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+ <package name="default" namespace="/" extends="struts-default, json-default">
+ 
+ 
+ <!--Admin related api  -->
+	<action name="login" class="com.learning.action.LoginAction">
+  		<result name="success">/course/addCourse.jsp</result>
+  		<!-- <result name="success">/createCourse.jsp</result>  deepanshu-->
+   		<result name="input">/login.jsp</result>
+  </action>
+  
+    <action name="signup" class="com.learning.action.SignupAction">
+  		<result name="success">/login.jsp</result>
+   		<result name="input">/signup.jsp</result>
+  </action>
+  
+      <action name="course" class="com.learning.action.CourseAction">
+  		<result name="success" type="redirectAction">courses</result>
+   		<result name="input">/signup.jsp</result>
+  	</action>
+  
+  
+  
+  
+  <!--Student and course related api  -->
+  
+  <action name="studentSignup" class="com.learning.action.StudentAction">
+  		<result name="success">/student-login.jsp</result>
+   		<result name="input">/student-signup.jsp</result>
+  </action>
+  
+  	<action name="studentLogin" class="com.learning.action.StudentLoginAction">
+  		<result name="success" type="redirectAction">allCoursesStudent</result>
+  		<!-- <result name="success">/createCourse.jsp</result>  deepanshu-->
+   		<result name="input">/studentLogin.jsp</result>
+  </action>
+
+  
+  
+  <action name="enrollCourse" class="com.learning.action.EnrollCourseAction">
+    <result name="success">/student-dashboard.jsp</result>
+    <result name="error">/courses.jsp</result>
+  </action>
+  
+
+<action name="coursesForParticularStudent" class="com.learning.action.AllCourseForStudent">
+    <result type="json">
+        <param name="root">courses</param>
+    </result>
+</action>
+
+<action name="courses" class="com.learning.action.AllCourseAction">
+<!--     <result type="json">
+        <param name="root">courses</param>
+    </result> -->
+    <result name="success">course/allCourse.jsp</result>
+</action>
+
+<action name="allCoursesStudent" class="com.learning.action.AllCourseAction">
+    <result name="success">course/allCoursesStudent.jsp</result>
+</action>
+
+
+
+
+
+ </package>
+
+</struts>
