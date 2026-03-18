@@ -69,6 +69,14 @@
 
 
 
+<!-- for birt report -->
+<action name="report" class="com.learning.action.ReportAction">
+    <result name="success">/report.jsp</result>
+</action>
+
+
+
+
 
  </package>
 
